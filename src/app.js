@@ -60,17 +60,17 @@ app.get("/products",(req,res)=>{
 
 app.get("/Weather",(req,res)=>{
     if(!req.query.address){
-        res.send({Error: "Please provide the address"})
+        res.send({error: "Please provide the address"})
     }
     else{
         geoloc(req.query.address,(error,{latitude,longitude,location}={})=>{
             if(error){
-                return res.send({error})
+                return res.send(error)
             }
             
             forecast(latitude, longitude,(error,forecastdata)=>{
                 if(error){
-                    return res.send({error})
+                    return res.send(error)
                 }
                 res.send({forecast: forecastdata,
                     location,
