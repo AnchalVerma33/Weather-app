@@ -17,7 +17,7 @@ const content1 =document.querySelector("#content-1")
 const content2 =document.querySelector("#content-2")
 const content3 =document.querySelector("#content-3")
 
-weatherform.addEventListener("submit",(e)=>{
+weatherform.addEventListener("submit",(event)=>{
     event.preventDefault()
     const location = searchplace.value
     console.log(location)
