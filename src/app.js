@@ -13,7 +13,7 @@ const forecast = require("./utils/forecast.js")
 const app = express()
 
 // Define paths for express config
-const Publicdirectory = path.join(__dirname,"../Public")
+const Publicdirectory = path.join(__dirname,"../public")
 const viewdirectory = path.join(__dirname,"../templates/views")
 const partialspath = path.join(__dirname,"../templates/partials")
 const port = process.env.PORT || 3000
