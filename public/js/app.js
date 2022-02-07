@@ -1,5 +1,3 @@
-console.log("Client side javascript loading!!!!")
-
 // fetch("http://localhost:3000/Weather?address=kanpur").then((response)=>{
 //     response.json().then((data)=>{
 //         if(data.error){
@@ -26,7 +24,7 @@ weatherform.addEventListener("submit",(e)=>{
     content1.textContent = "loading...."
     content2.textcontent = " "
     content3.textcontent = " "
-    fetch("http://localhost:3000/Weather?address="+ location).then((response)=>{
+    fetch("/Weather?address="+ location).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             return content1.textContent = data.error
@@ -35,11 +33,6 @@ weatherform.addEventListener("submit",(e)=>{
             content1.textContent = data.forecast
             content2.textcontent = data.location
             content3.textcontent = data.address
-
-
-            // console.log(data.forecast)
-            // console.log(data.location)
-            // console.log(data.address)
         }
     })
 })

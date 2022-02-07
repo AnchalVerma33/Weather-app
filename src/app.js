@@ -16,6 +16,7 @@ const app = express()
 const Publicdirectory = path.join(__dirname,"../Public")
 const viewdirectory = path.join(__dirname,"../templates/views")
 const partialspath = path.join(__dirname,"../templates/partials")
+const port = process.env.PORT || 3000
 
 // Setup static directory to serve
 app.use(express.static(Publicdirectory))                            // including static files
@@ -120,6 +121,6 @@ app.get("*",(req,res)=>{
 // })
 // -------------------------------------------------------------------------------------------------------------
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Server starting up")
 })
